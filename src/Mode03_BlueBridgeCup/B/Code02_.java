@@ -1,4 +1,4 @@
-package Mode03_BlueBridgeCup.Day01_;
+package Mode03_BlueBridgeCup.B;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @date 2023/3/21
  * @description:
  */
-public class Code04_ {
+public class Code02_ {
     /*
     给定三个整数数组
         满足条件：

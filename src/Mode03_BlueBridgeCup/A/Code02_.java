@@ -1,4 +1,4 @@
-package Mode03_BlueBridgeCup.Day01_;
+package Mode03_BlueBridgeCup.A;
 
 import java.util.Scanner;
 

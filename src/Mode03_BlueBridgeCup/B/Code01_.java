@@ -1,4 +1,4 @@
-package Mode03_BlueBridgeCup.Day01_;
+package Mode03_BlueBridgeCup.B;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @date 2023/3/21
  * @description:
  */
-public class Code03_ {
+public class Code01_ {
     /*
     例如一块 6x5 的巧克力可以切出 6 块 2x2 的巧克力或者 2 块 3x3 的巧克力
     当然小朋友们都希望得到的巧克力尽可能大，你能帮小明计算出最大的边长是多少么？
