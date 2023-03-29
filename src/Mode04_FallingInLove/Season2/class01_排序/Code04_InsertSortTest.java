@@ -37,8 +37,6 @@ public class Code04_InsertSortTest {
 
     /**
      * 插入排序的一点优化（将交换替换成偏移）
-     *
-     * @param arr
      */
     public static void insertSortOptimize(int[] arr) {
         for (int begin = 1; begin < arr.length; begin++) {
