@@ -16,7 +16,7 @@ public class code03_字符统计 {
         for (int i = 0; i < str.length(); i++) {
             int index = str.charAt(i) - 'A';
             charArray[index]++;
-            max = max > charArray[index] ? max : charArray[index];
+            max = Math.max(max, charArray[index]);
         }
         for (int i = 0; i < charArray.length; i++) {
             if (charArray[i] == max) {

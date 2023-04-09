@@ -11,15 +11,15 @@ public class code04_数的分解 {
         int num = 2019;
         int count = 0;
         for (int i = 1; i < num; i++) {
-            if ((i + "").indexOf("2") != -1 || (i + "").indexOf("4") != -1) {
+            if ((i + "").contains("2") || (i + "").contains("4")) {
                 continue;
             }
             for (int j = i + 1; j < num; j++) {
-                if ((j + "").indexOf("2") != -1 || (j + "").indexOf("4") != -1) {
+                if ((j + "").contains("2") || (j + "").contains("4")) {
                     continue;
                 }
                 int k = num - i - j;
-                if ((k + "").indexOf("2") != -1 || (k + "").indexOf("4") != -1) {
+                if ((k + "").contains("2") || (k + "").contains("4")) {
                     continue;
                 }
                 if (k <= 0) {

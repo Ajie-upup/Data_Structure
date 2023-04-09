@@ -31,7 +31,7 @@ public class code07_外卖店优先级 {
             for (int j = 1; j < t + 1; j++) {
                 if (brr[i][j] == 0) {//当第i个店的j时刻没有订单时，优先级要减一，同时最小为0
                     prior -= 1;
-                    prior = prior >= 0 ? prior : 0;
+                    prior = Math.max(prior, 0);
                 } else {
                     prior += 2 * brr[i][j];//有订单，优先级则乘2
                 }
