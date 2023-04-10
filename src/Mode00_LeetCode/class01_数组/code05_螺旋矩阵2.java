@@ -1,6 +1,4 @@
-package Mode00_LeetCode.class_数组;
-
-import java.util.List;
+package Mode00_LeetCode.class01_数组;
 
 /**
  * @author ajie

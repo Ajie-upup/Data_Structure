@@ -1,4 +1,4 @@
-package Mode00_LeetCode.class_数组;
+package Mode00_LeetCode.class01_数组;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,32 +18,30 @@ public class code06_螺旋矩阵 {
     }
 
     public static List<Integer> spiralOrder(int[][] matrix) {
-        List<Integer> order = new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return order;
+            return res;
         }
         int rows = matrix.length, columns = matrix[0].length;
-        int left = 0, right = columns - 1, top = 0, bottom = rows - 1;
+        int left = 0, top = 0, bottom = rows - 1, right = columns - 1;
         while (left <= right && top <= bottom) {
             for (int column = left; column <= right; column++) {
-                order.add(matrix[top][column]);
+                res.add(matrix[top][column]);
             }
-            for (int row = top + 1; row <= bottom; row++) {
-                order.add(matrix[row][right]);
+            top++;
+            for (int row = top; row <= bottom; row++) {
+                res.add(matrix[top][row]);
             }
-            if (left < right && top < bottom) {
-                for (int column = right - 1; column > left; column--) {
-                    order.add(matrix[bottom][column]);
-                }
-                for (int row = bottom; row > top; row--) {
-                    order.add(matrix[row][left]);
-                }
+            right--;
+            for (int column = right; column >= left && bottom >= top; column--) {
+                res.add(matrix[bottom][column]);
+            }
+            bottom--;
+            for (int row = bottom; row >= top && left <= right; row--) {
+                res.add(matrix[row][left]);
             }
             left++;
-            right--;
-            top++;
-            bottom--;
         }
-        return order;
+        return res;
     }
 }

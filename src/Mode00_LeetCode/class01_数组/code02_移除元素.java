@@ -1,6 +1,4 @@
-package Mode00_LeetCode.class_数组;
-
-import java.math.BigInteger;
+package Mode00_LeetCode.class01_数组;
 
 /**
  * @author ajie
