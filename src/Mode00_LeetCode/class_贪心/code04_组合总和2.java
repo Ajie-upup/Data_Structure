@@ -1,6 +1,4 @@
-package Mode00_LeetCode.class_回溯;
-
-import netscape.security.UserTarget;
+package Mode00_LeetCode.class_贪心;
 
 import java.util.*;
 
