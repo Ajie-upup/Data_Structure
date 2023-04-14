@@ -1,0 +1,28 @@
+package Mode00_LeetCode.class09_动态规划;
+
+/**
+ * @author ajie
+ * @date 2023/4/14
+ * @description:
+ */
+public class code10_目标和 {
+    public int findTargetSumWays(int[] nums, int target) {
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+        }
+        //如果target过大 sum将无法满足
+        if (target < 0 && sum < -target) return 0;
+        if ((target + sum) % 2 != 0) return 0;
+        int size = (target + sum) / 2;
+        if (size < 0) size = -size;
+        int[] dp = new int[size + 1];
+        dp[0] = 1;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = size; j >= nums[i]; j--) {
+                dp[j] += dp[j - nums[i]];
+            }
+        }
+        return dp[size];
+    }
+}
